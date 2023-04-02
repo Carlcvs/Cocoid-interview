@@ -1,0 +1,30 @@
+1) What are Scalar functions and write a query?
+
+Scalar functions are functions that take one or more parameters and return a single value. Examples of scalar functions include ABS(), CEILING(), FLOOR(), LEN(), and ROUND().
+
+For example, the following query uses the ROUND() scalar function to round a number to two decimal places:
+
+SELECT ROUND(3.14159, 2) AS RoundedNumber;
+
+The result of this query would be:
+
+RoundedNumber
+-------------
+3.14
+
+
+2)Explain joins with example and output.
+
+A join is a query that combines data from two or more tables in a relational database. Joins are used to retrieve data from multiple tables based on a common field between them.
+
+For example, consider two tables, "Customers" and "Orders". The "Customers" table contains information about customers such as their name, address, and phone number. The "Orders" table contains information about orders such as the customer's ID, order date, and order total.
+
+We can use a join to combine the data from these two tables and retrieve information about customers and their orders. The following query uses an inner join to combine the data from the two tables:
+
+SELECT Customers.Name, Orders.OrderDate, Orders.OrderTotal
+FROM Customers
+INNER JOIN Orders
+ON Customers.ID = Orders.CustomerID;
+
+
+The output of this query would be a table containing the customer's name, the order date, and the order total for each order.
